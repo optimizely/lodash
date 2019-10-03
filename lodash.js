@@ -1357,7 +1357,7 @@
     );
 
     /** Built-in value references. */
-    var Buffer = moduleExports ? context.Buffer : undefined,
+    var Buffer = /*moduleExports ? context.Buffer : */undefined,
         Reflect = context.Reflect,
         Symbol = context.Symbol,
         Uint8Array = context.Uint8Array,

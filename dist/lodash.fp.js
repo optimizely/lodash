@@ -52,7 +52,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var baseConvert = __webpack_require__(1);
 
@@ -73,13 +73,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = browserConvert;
 
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	var mapping = __webpack_require__(2),
 	    mutateMap = mapping.mutate,
-	    placeholder = {};
+	    fallbackHolder = {};
 
 	/**
 	 * The base implementation of `convert` which accepts a `util` object of methods
@@ -119,7 +119,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    'rearg': 'rearg' in options ? options.rearg : true
 	  };
 
-	  var forceRearg = ('rearg' in options) && options.rearg;
+	  var forceRearg = ('rearg' in options) && options.rearg,
+	      placeholder = isLib ? func : fallbackHolder;
 
 	  var helpers = isLib ? func : {
 	    'ary': util.ary,
@@ -397,9 +398,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = baseConvert;
 
 
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	/** Used to map aliases to their real names. */
 	exports.aliasToReal = {
@@ -646,7 +647,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 
-/***/ }
+/***/ })
 /******/ ])
 });
 ;

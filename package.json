@@ -1,8 +1,7 @@
 {
-  "name": "lodash",
+  "name": "@optimizely/lodash",
   "version": "4.6.1",
   "main": "lodash.js",
-  "private": true,
   "devDependencies": {
     "async": "^1.5.2",
     "benchmark": "^2.1.0",

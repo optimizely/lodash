@@ -2659,7 +2659,7 @@
         }
       });
 
-      QUnit.test('`_.' + methodName + '` should clone buffers', function(assert) {
+      QUnit.skip('`_.' + methodName + '` should clone buffers', function(assert) {
         assert.expect(4);
 
         if (Buffer) {
@@ -8366,7 +8366,7 @@
   (function() {
     var args = arguments;
 
-    QUnit.test('should return `true` for buffers', function(assert) {
+    QUnit.skip('should return `true` for buffers', function(assert) {
       assert.expect(1);
 
       if (Buffer) {
